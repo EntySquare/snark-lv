@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92613d27-e984-4962-b374-ef5484aa593c" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE-APACHE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README_AMD.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benches/lc.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/verifier_bench/Cargo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/verifier_bench/src/bin/main.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rust-toolchain" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bls.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/blake2s.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/boolean.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/lookup.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/multieq.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/multipack.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/num.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/sha256.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/test/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gadgets/uint32.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/error.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/fft.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/fft/fft.cl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/locks.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/multiexp.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/multiexp/ec.cl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/multiexp/field2.cl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/multiexp/multiexp.cl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/nogpu.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/sources.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gpu/utils.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/ext.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/generator.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/mapped_params.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/multiscalar.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/params.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/proof.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/prover.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/tests/dummy_engine.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/tests/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/verifier.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/groth16/verifying_key.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multicore.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multiexp.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util_cs/bench_cs.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util_cs/metric_cs.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util_cs/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util_cs/test_cs.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/gpu_provers.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/mimc.rs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/Cellar/go/1.16.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="5uop5xqb" />
+  </component>
+  <component name="ProjectId" id="1vcEHdLmZFZe9GlURfa1Du43hSz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="language.rust" />
+  </component>
+  <component name="RustProjectSettings">
+    <option name="explicitPathToStdlib" value="$USER_HOME$/.rustup/toolchains/nightly-2021-04-24-x86_64-apple-darwin/lib/rustlib/src/rust" />
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.rustup/toolchains/nightly-x86_64-apple-darwin/bin" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
