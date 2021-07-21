@@ -399,6 +399,7 @@ where
     G::Engine: crate::bls::Engine,
     S: SourceBuilder<G>,
 {
+    let start_all = Local::now().timestamp();
     if let Some(ref mut kern) = kern {
         if let Ok(p) = kern.with(|k: &mut gpu::MultiexpKernel<G::Engine>| {
             let (bss, skip) = bases.clone().get();
@@ -408,6 +409,8 @@ where
             return result
         }
     }
+    let end = Local::now().timestamp();
+    println!("[DEBUG] multiexp_fulldensity-all bases clone DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_all, end, end - start_all);
     Waiter::done(Err(SynthesisError::GPUError(gpu::GPUError::GPUDisabled)))
 }
 
