@@ -6,7 +6,7 @@ use rayon::prelude::*;
 use std::io;
 use std::iter;
 use std::sync::Arc;
-
+use chrono::Local;
 use super::multicore::{Waiter, Worker};
 use super::SynthesisError;
 use crate::gpu;
@@ -323,17 +323,27 @@ where
     G::Engine: crate::bls::Engine,
     S: SourceBuilder<G>,
 {
+    let start_api = Local::now().timestamp();
     if let Some(ref mut kern) = kern {
         if let Ok(p) = kern.with(|k: &mut gpu::MultiexpKernel<G::Engine>| {
             let mut exps = vec![exponents[0]; exponents.len()];
             let mut n = 0;
+            let start_enty = Local::now().timestamp();
             for (&e, d) in exponents.iter().zip(density_map.as_ref().iter()) {
                 if d {
                     exps[n] = e;
                     n += 1;
                 }
             }
+            let end = Local::now().timestamp();
+            println!("[DEBUG] multiexp-1 kern with ok DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+            let start_enty = Local::now().timestamp();
+
             let (bss, skip) = bases.clone().get();
+
+            let end = Local::now().timestamp();
+            println!("[DEBUG] multiexp-2 bases clone DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+
             k.multiexp(pool, bss, Arc::new(exps), skip, n)
         }) {
             let result = Waiter::done(Ok(p));
@@ -353,8 +363,15 @@ where
         assert!(query_size == exponents.len());
     }
 
+    let start_enty = Local::now().timestamp();
+
     let result = pool.compute(move || multiexp_inner(bases, density_map, exponents, c));
 
+    let end = Local::now().timestamp();
+    println!("[DEBUG] multiexp-3 pool compute DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+
+    let end = Local::now().timestamp();
+    println!("[DEBUG] multiexp-all DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_api, end, end - start_api);
     #[cfg(feature = "gpu")]
     {
         // Do not give the control back to the caller till the
@@ -408,6 +425,7 @@ where
     G: CurveAffine,
     G::Engine: crate::bls::Engine,
 {
+    let start_all = Local::now().timestamp();
     if let Some(ref mut kern) = kern {
         if let Ok(p) = kern.with(|k: &mut gpu::MultiexpKernel<G::Engine>| {
             k.multiexp(pool, bss.clone(), exps.clone(), skip, n)
@@ -416,6 +434,8 @@ where
             return result
         }
     }
+    let end = Local::now().timestamp();
+    println!("[DEBUG] multiexp_skipdensity-all bases clone DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_all, end, end - start_all);
     Waiter::done(Err(SynthesisError::GPUError(gpu::GPUError::GPUDisabled)))
 }
 
