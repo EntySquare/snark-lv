@@ -340,6 +340,10 @@ where
     }
 
 
+    let end = Local::now().timestamp();
+    println!("[DEBUG] Open-CPBP-1-1 create_proof_batch_priority, params prepare  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+    let start_enty = Local::now().timestamp();
+
     // get params
     info!("ZQ: get params start");
     let now = Instant::now();
@@ -414,6 +418,9 @@ where
     let assignments = rx_assignments.recv().unwrap();
     info!("ZQ: get params end: {:?}", now.elapsed());
 
+    let end = Local::now().timestamp();
+    println!("[DEBUG] Open-CPBP-lvparams create_proof_batch_priority, params prepare  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+    let start_enty = Local::now().timestamp();
 
     #[cfg(feature = "gpu")]
     let prio_lock = if priority {
@@ -428,7 +435,7 @@ where
     let mut fft_kern = Some(LockedFFTKernel::<E>::new(log_d, priority));
 
     let end = Local::now().timestamp();
-    println!("[DEBUG] Open-CPBP-1 create_proof_batch_priority, params prepare  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
+    println!("[DEBUG] Open-CPBP-1-2 create_proof_batch_priority, params prepare  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
     let start_enty = Local::now().timestamp();
 
     let a_s = provers
