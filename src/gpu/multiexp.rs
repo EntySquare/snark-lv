@@ -313,7 +313,7 @@ where
             };
             let end = Local::now().timestamp();
             println!("[DEBUG] multiexp<G>-1 install DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_install, end, end - start_install);
-
+	    let start_enty = Local::now().timestamp();
             let cpu_acc = cpu_multiexp(
                 &pool,
                 (Arc::new(cpu_bases.to_vec()), 0),
