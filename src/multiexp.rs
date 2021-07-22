@@ -204,6 +204,7 @@ where
     G: CurveAffine,
     S: SourceBuilder<G>,
 {
+    println!("[DEBUG] multiexp_inner run");
     // Perform this region of the multiexp
     let this = move |bases: S,
                      density_map: D,
@@ -295,6 +296,7 @@ where
     G::Engine: crate::bls::Engine,
     S: SourceBuilder<G>,
 {
+    println!("[DEBUG] density_filter run");
     let mut exps = vec![exponents[0]; exponents.len()];
     let mut n = 0;
     for (&e, d) in exponents.iter().zip(density_map.as_ref().iter()) {
@@ -399,6 +401,7 @@ where
     G::Engine: crate::bls::Engine,
     S: SourceBuilder<G>,
 {
+    println!("[DEBUG] multiexp_fulldensity-all run");
     let start_all = Local::now().timestamp();
     if let Some(ref mut kern) = kern {
         if let Ok(p) = kern.with(|k: &mut gpu::MultiexpKernel<G::Engine>| {
@@ -428,6 +431,7 @@ where
     G: CurveAffine,
     G::Engine: crate::bls::Engine,
 {
+    println!("[DEBUG] multiexp_skipdensity run");
     let start_all = Local::now().timestamp();
     if let Some(ref mut kern) = kern {
         if let Ok(p) = kern.with(|k: &mut gpu::MultiexpKernel<G::Engine>| {

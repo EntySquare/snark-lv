@@ -491,7 +491,7 @@ where
             Ok(h)
         })
         .collect::<Result<Vec<_>, SynthesisError>>()?;
-info!("ZQ: h_s end: {:?}", now.elapsed());
+    info!("ZQ: h_s end: {:?}", now.elapsed());
 
     let end = Local::now().timestamp();
     println!("[DEBUG] Open-CPBP-3 h_s DONE  \n start :: {:?},\n end :{:?},\n duration:{:?}\n", start_enty, end, end - start_enty);
